@@ -50,8 +50,6 @@
                     </view>
                     <connections>
                         <outlet property="CreatePopUpBtn" destination="QEE-nF-7wZ" id="byY-9R-ObZ"/>
-                        <outlet property="MyWebView" destination="YG0-em-7jX" id="X5m-B3-AWa"/>
-                        <outlet property="createPopUpBtn" destination="QEE-nF-7wZ" id="YDr-5E-BwG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

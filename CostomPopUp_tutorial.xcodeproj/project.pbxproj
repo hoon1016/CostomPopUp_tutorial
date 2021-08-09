@@ -16,6 +16,8 @@
 		8E5923AE26BA91AF002358C5 /* PopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E5923AD26BA91AF002358C5 /* PopUp.storyboard */; };
 		8E5923B026BA954E002358C5 /* CostomPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5923AF26BA954E002358C5 /* CostomPopUpViewController.swift */; };
 		8E5923B326BA980D002358C5 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E5923B226BA980D002358C5 /* WebKit.framework */; };
+		8E5923B526BD9573002358C5 /* PopUpDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5923B426BD9573002358C5 /* PopUpDelegate.swift */; };
+		8E5923D726C0DBF4002358C5 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5923D626C0DBF4002358C5 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		8E5923AD26BA91AF002358C5 /* PopUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopUp.storyboard; sourceTree = "<group>"; };
 		8E5923AF26BA954E002358C5 /* CostomPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostomPopUpViewController.swift; sourceTree = "<group>"; };
 		8E5923B226BA980D002358C5 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		8E5923B426BD9573002358C5 /* PopUpDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpDelegate.swift; sourceTree = "<group>"; };
+		8E5923D626C0DBF4002358C5 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,12 +71,14 @@
 				8E59239926BA909F002358C5 /* AppDelegate.swift */,
 				8E59239B26BA909F002358C5 /* SceneDelegate.swift */,
 				8E59239D26BA909F002358C5 /* ViewController.swift */,
+				8E5923D626C0DBF4002358C5 /* WebViewController.swift */,
 				8E59239F26BA909F002358C5 /* Main.storyboard */,
 				8E5923A226BA90A0002358C5 /* Assets.xcassets */,
 				8E5923A426BA90A0002358C5 /* LaunchScreen.storyboard */,
 				8E5923A726BA90A0002358C5 /* Info.plist */,
 				8E5923AD26BA91AF002358C5 /* PopUp.storyboard */,
 				8E5923AF26BA954E002358C5 /* CostomPopUpViewController.swift */,
+				8E5923B426BD9573002358C5 /* PopUpDelegate.swift */,
 			);
 			path = CostomPopUp_tutorial;
 			sourceTree = "<group>";
@@ -156,6 +162,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E5923B526BD9573002358C5 /* PopUpDelegate.swift in Sources */,
+				8E5923D726C0DBF4002358C5 /* WebViewController.swift in Sources */,
 				8E59239E26BA909F002358C5 /* ViewController.swift in Sources */,
 				8E59239A26BA909F002358C5 /* AppDelegate.swift in Sources */,
 				8E5923B026BA954E002358C5 /* CostomPopUpViewController.swift in Sources */,

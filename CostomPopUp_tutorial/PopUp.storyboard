@@ -8,6 +8,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="iHD-hE-mmN">
+            <objects>
+                <navigationController storyboardIdentifier="PopUpNaviVC" id="8vZ-Zl-zVk" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mFG-4x-Iuq">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="jlt-dB-AaP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b94-cU-oQB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1494" y="50"/>
+        </scene>
         <!--Costom Pop Up View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
@@ -20,12 +36,9 @@
                                 <rect key="frame" x="0.0" y="39" width="414" height="818"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <action selector="onBgBtnClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hFD-Qf-WOr"/>
-                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gZ4-hb-wIz" userLabel="contentView">
-                                <rect key="frame" x="82" y="298" width="250" height="300"/>
+                                <rect key="frame" x="82" y="248" width="250" height="400"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my_image" translatesAutoresizingMaskIntoConstraints="NO" id="0tq-PV-QGq">
                                         <rect key="frame" x="65" y="20" width="120" height="120"/>
@@ -35,55 +48,91 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안녕하세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eOo-iM-crH">
-                                        <rect key="frame" x="88" y="148" width="74" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="88" y="148" width="74" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="블로그 방문 많이 해주세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMM-uZ-bZx">
-                                        <rect key="frame" x="35" y="177" width="180" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오래를 만든 일조입니다!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMM-uZ-bZx">
+                                        <rect key="frame" x="44.5" y="176.5" width="161" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zQf-HA-rQk">
+                                        <rect key="frame" x="65" y="262" width="120" height="110"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pjG-ns-BoA">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="30"/>
+                                                <color key="backgroundColor" red="0.41453014930245224" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="ldj-ct-E9i"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="인스타 가기">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onClickOpenWebPage:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="KcG-VD-neE"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDg-yG-Md1">
+                                                <rect key="frame" x="0.0" y="40" width="120" height="30"/>
+                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="4Oh-s0-eZM"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="오래 사이트 가기">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onClickOpenWebPage:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Dke-Bu-9cQ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ah-ui-4gN">
+                                                <rect key="frame" x="0.0" y="80" width="120" height="30"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="3KY-pd-sYY"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="블로그 가기!">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onClickOpenWebPage:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="nyo-0U-gh2"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="0tq-PV-QGq" firstAttribute="centerX" secondItem="gZ4-hb-wIz" secondAttribute="centerX" id="8Ok-vq-zSE"/>
                                     <constraint firstItem="eOo-iM-crH" firstAttribute="centerX" secondItem="gZ4-hb-wIz" secondAttribute="centerX" id="K3U-r3-b7T"/>
-                                    <constraint firstAttribute="height" constant="300" id="MVT-Lb-WbA"/>
+                                    <constraint firstAttribute="height" constant="400" id="MVT-Lb-WbA"/>
                                     <constraint firstItem="eOo-iM-crH" firstAttribute="top" secondItem="0tq-PV-QGq" secondAttribute="bottom" constant="8" id="QRT-c3-VYU"/>
                                     <constraint firstItem="BMM-uZ-bZx" firstAttribute="centerX" secondItem="gZ4-hb-wIz" secondAttribute="centerX" id="cBg-AY-BSL"/>
                                     <constraint firstAttribute="width" constant="250" id="cUJ-Fm-e9R"/>
                                     <constraint firstItem="BMM-uZ-bZx" firstAttribute="top" secondItem="eOo-iM-crH" secondAttribute="bottom" constant="8" id="dVB-YM-aOO"/>
+                                    <constraint firstItem="zQf-HA-rQk" firstAttribute="centerX" secondItem="gZ4-hb-wIz" secondAttribute="centerX" id="s3i-GM-AJL"/>
+                                    <constraint firstAttribute="bottom" secondItem="zQf-HA-rQk" secondAttribute="bottom" constant="28" id="spn-ri-BkQ"/>
                                     <constraint firstItem="0tq-PV-QGq" firstAttribute="top" secondItem="gZ4-hb-wIz" secondAttribute="top" constant="20" id="zPZ-6N-CBV"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ah-ui-4gN">
-                                <rect key="frame" x="147" y="542" width="120" height="30"/>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="3KY-pd-sYY"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="블로그 가기!">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="onSubscribeBtnClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="IXh-FJ-6zN"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.66185693027210879" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="gZ4-hb-wIz" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="1qI-Dt-ARp"/>
-                            <constraint firstItem="3ah-ui-4gN" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="LeN-fS-RxS"/>
                             <constraint firstItem="gZ4-hb-wIz" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="ckN-6r-xil"/>
-                            <constraint firstItem="gZ4-hb-wIz" firstAttribute="bottom" secondItem="3ah-ui-4gN" secondAttribute="bottom" constant="26" id="yme-Ts-MWy"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ZMB-J2-6eE"/>
                     <connections>
+                        <outlet property="InstarBtn" destination="pjG-ns-BoA" id="AFP-9h-SW8"/>
+                        <outlet property="OpenORAEBtn" destination="YDg-yG-Md1" id="xl4-v5-DRy"/>
                         <outlet property="SubscribeBtn" destination="3ah-ui-4gN" id="qij-dW-bBw"/>
                         <outlet property="bgBtn" destination="VVd-FO-eHP" id="ORb-Oi-vpt"/>
                         <outlet property="contentView" destination="gZ4-hb-wIz" id="g9B-uk-zK1"/>
@@ -91,16 +140,53 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="75"/>
+            <point key="canvasLocation" x="-691" y="50"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="BTQ-p2-GeU">
+            <objects>
+                <viewController storyboardIdentifier="WebViewController" id="pgo-Mp-OQf" customClass="WebViewController" customModule="CostomPopUp_tutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Gy-zK-s58">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NKQ-yb-z9V">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wzU-iX-kS3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NKQ-yb-z9V" firstAttribute="leading" secondItem="wzU-iX-kS3" secondAttribute="leading" id="JPx-z1-Vsx"/>
+                            <constraint firstItem="NKQ-yb-z9V" firstAttribute="top" secondItem="wzU-iX-kS3" secondAttribute="top" id="WrL-lq-06M"/>
+                            <constraint firstItem="NKQ-yb-z9V" firstAttribute="bottom" secondItem="wzU-iX-kS3" secondAttribute="bottom" id="Z35-ce-tFN"/>
+                            <constraint firstItem="NKQ-yb-z9V" firstAttribute="trailing" secondItem="wzU-iX-kS3" secondAttribute="trailing" id="oOs-7G-fd9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="MyWebView" destination="NKQ-yb-z9V" id="iGf-9d-YeH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xmr-WO-bcq" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="751" y="75"/>
         </scene>
     </scenes>
     <resources>
-        <image name="my_image" width="479.5" height="640"/>
+        <image name="my_image" width="445" height="394"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
